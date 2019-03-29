@@ -9,7 +9,7 @@
  * GitHub Repository: https://github.com/ranchodeluxemedia/ranchodeluxeco-business-hours
  * GitHub Plugin URI: https://github.com/ranchodeluxemedia/ranchodeluxeco-business-hours
  * Domain Path:     /languages
- * Version:         0.1.1
+ * Version:         0.1.2
  *
  * @package         Ranchodeluxeco_Business_Hours
  */
@@ -47,6 +47,17 @@ function open_hours_shortcode()
 
 }
 add_shortcode('rdc-store-hours', 'open_hours_shortcode');
+
+
+
+// Add year shrtcode here so I don't have to install a child-theme.
+function year_shortcode() {
+  $year = date('Y');
+  return $year;
+}
+add_shortcode('year', 'year_shortcode');
+
+
 
 // github updater overide dot org updates
 add_filter( 'github_updater_override_dot_org', function() {
