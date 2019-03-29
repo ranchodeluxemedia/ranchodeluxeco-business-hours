@@ -9,7 +9,7 @@
  * GitHub Repository: https://github.com/ranchodeluxemedia/ranchodeluxeco-business-hours
  * GitHub Plugin URI: https://github.com/ranchodeluxemedia/ranchodeluxeco-business-hours
  * Domain Path:     /languages
- * Version:         0.1.0
+ * Version:         0.1.1
  *
  * @package         Ranchodeluxeco_Business_Hours
  */
@@ -23,6 +23,9 @@ use Cmixin\BusinessTime;
 
 function open_hours_shortcode()
 {
+	  // set timezone
+	  date_default_timezone_set('America/Chicago');
+
 	  // set hours
 	  $openingHours = BusinessTime::enable(Carbon::class, [
 			'monday'    => ['09:00-17:30'],
