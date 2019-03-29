@@ -6,6 +6,8 @@
  * Author:          Rancho Deluxe Co.
  * Author URI:      https://ranchodeluxe.dev
  * Text Domain:     ranchodeluxeco-business-hours
+ * GitHub Repository: https://github.com/ranchodeluxemedia/ranchodeluxeco-business-hours
+ * GitHub Plugin URI: https://github.com/ranchodeluxemedia/ranchodeluxeco-business-hours
  * Domain Path:     /languages
  * Version:         0.1.0
  *
