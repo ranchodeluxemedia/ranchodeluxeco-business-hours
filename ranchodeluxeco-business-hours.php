@@ -43,4 +43,18 @@ function open_hours_shortcode()
 	  }
 
 }
-add_shortcode('store-hours-test', 'open_hours_shortcode');
+add_shortcode('rdc-store-hours', 'open_hours_shortcode');
+
+// github updater overide dot org updates
+add_filter( 'github_updater_override_dot_org', function() {
+    return [
+        'ranchodeluxeco-business-hours/ranchodeluxeco-business-hours.php' //plugin format
+    ];
+});
+
+// Disables WP-Cron for API calls
+add_filter( 'github_updater_disable_wpcron', '__return_true' );
+
+
+// hook into API::exit_no_update() so that the user can always check for a new update
+add_filter( 'ghu_always_fetch_update', '__return_true' );
